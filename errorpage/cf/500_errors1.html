@@ -24,7 +24,7 @@
                 if (maxtime >= 0) {
                     minutes = Math.floor(maxtime / 60);
                     seconds = Math.floor(maxtime % 60);
-                    msg = "请稍候 " + seconds + " 秒,再刷新尝试";
+                    msg = "服务器失去响应，请稍候 " + seconds + " 秒,再刷新尝试";
                     
                     if (maxtime == 0){msg = "即将重新刷新！";location.reload() ;}
 			document.all["timer"].innerHTML = msg;
@@ -62,7 +62,7 @@
 
 </div>
 <div class="attribution">
-因为源服务器错误您目前无法访问我们
+因为源服务器发生5XX错误您目前无法访问我们
 <br />
 您的IP::CLIENT_IP::已被记录
 </div>
