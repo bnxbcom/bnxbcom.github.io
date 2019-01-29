@@ -26,9 +26,9 @@
                     seconds = Math.floor(maxtime % 60);
                     msg = "请稍候 " + seconds + " 秒,再刷新尝试";
                     
-                    if (maxtime == 0){msg = "加载中,即将进入！";}
+                    if (maxtime == 0){msg = "即将重新刷新！";location.reload() ;}
 			document.all["timer"].innerHTML = msg;
-			location.reload() ;
+			
                         --maxtime;
                 } else{
                     clearInterval(timer);
