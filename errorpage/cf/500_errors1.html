@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>安全检查中,请稍候5秒钟</title>
+<title>5XX错误 | 无法连接源服务器</title>
 <style type="text/css">
     html, body {width: 100%; height: 100%; margin: 0; padding: 0;}
     body {background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 100%;}
@@ -24,10 +24,11 @@
                 if (maxtime >= 0) {
                     minutes = Math.floor(maxtime / 60);
                     seconds = Math.floor(maxtime % 60);
-                    msg = "请稍候 " + seconds + " 秒,正在检验您的访问";
+                    msg = "请稍候 " + seconds + " 秒,再刷新尝试";
                     
                     if (maxtime == 0){msg = "加载中,即将进入！";}
-					document.all["timer"].innerHTML = msg;
+			document.all["timer"].innerHTML = msg;
+			location.reload() ;
                         --maxtime;
                 } else{
                     clearInterval(timer);
@@ -61,7 +62,7 @@
 
 </div>
 <div class="attribution">
-本站受CLOUDFLARE防御系统保护
+因为源服务器错误您目前无法访问我们
 <br />
 您的IP::CLIENT_IP::已被记录
 </div>
